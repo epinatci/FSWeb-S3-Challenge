@@ -55,6 +55,7 @@ html {
     max-width: 1920px;
     min-width: 428px;
     font-size: 62.5%;
+    width: 100%;
 }
 
 body {
@@ -64,14 +65,21 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+    color: white;
 }
 
 h1 {
     font-size: 7.5rem;
+    text-align: center;
 }
 
 h2 {
     font-size: 6rem;
+    text-align: center;
+}
+
+.baslik {
+    padding-top: 100px;
 }
 
 h3 {
@@ -84,6 +92,7 @@ h4 {
 
 p, a {
     font-size: 3rem;
+    color: white;
 }
 
 /* header section */
@@ -96,6 +105,26 @@ header {
     background-repeat: no-repeat;
 }
 
+header > div {
+    padding: 2%;
+    width: 100%;
+    background: rgb(0, 4, 17, .8);
+}
+
+nav div {
+    text-align: center;
+}
+
+nav a {
+    font-size: 3rem;
+    margin: 2% 5%;
+    display: inline-block;
+}
+nav i {
+    color: white;
+    font-size: 4rem;
+    margin: 2% 2%;
+}
 /* spacer */
 .spacer {
     width: 100%;
@@ -113,24 +142,106 @@ header {
 .menu {
     width: 100%;
     height: auto;
-    background-image: url('../img/staff-bartender.jpg');
-    background-color: rgb(0, 4, 17);
+    background-image: url('../img/staff-bartender.jpg') ;
+    background-color: rgb(0, 4, 17, 0.7);
     background-size: cover;
+    background-blend-mode: darken;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+.baslik {
+    text-align: center;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    order: 3;
+    padding: 8%;
+}
+
+.menu-section {
+    width: 42%;
+    margin:40px  ;
+}
+
+.fff {
+    flex-wrap: nowrap;
+    margin: 0 auto;
+}
+
+.menu-item div{
+  display: flex;
+  justify-content: space-between;
+
+}
 /* footer section */
 footer {
     width: 100%;
     height: 15vh;
     padding-top: 2.5vh;
+    padding-bottom: 5vh;
     font-size: 3rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 4, 17);
+    align-items: flex-start;
+    border-top: solid rgb(101, 96, 96) 1px;
 }
+
+.nav {
+    width: 65%;
+}
+footer nav{
+    display: flex;
+    justify-content: space-around;
+}
+footer a {
+    margin: 0;
+    margin-bottom: 3%;
+    color: white;
+}
+
+.nav p {
+    text-align: right;
+    padding-right: 3%;
+    font-size: 2rem;
+}
+
+.email {
+    text-align: center;
+    width: 30%;
+    font-size: 1rem;
+}
+.button{
+    font-size: 2rem;
+    padding: 1%;
+    font-weight: 10px;
+} 
+
+#email{
+    font-size: 1rem;
+    width: 60%;
+    padding: 2%;
+}
+
 
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
+    * {
+        text-align: center;
+    }
+    header nav a {
+        display:block;
+    }
+
+    header nav i{
+        font-weight: 100;
+    }
+    
     .header-title {
         width: 75%;
         margin: 0 auto;
@@ -142,11 +253,58 @@ footer {
     .menu {
         background-image: none;
     }
+    /* .menu {
+        width: 100%;
+        height: auto;
+        background-image: url('../img/staff-bartender.jpg') ;
+        background-color: rgb(0, 4, 17, 0.7);
+        background-size: cover;
+        background-blend-mode: darken;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .baslik {
+        text-align: center;
+    }
+    
+    .menu-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        order: 3;
+        padding: 8%;
+    }
+    
+    .menu-section {
+        width: 42%;
+        margin:40px  ;
+    }
+    
+    .fff {
+        flex-wrap: nowrap;
+        margin: 0 auto;
+    }
+    
+    .menu-item {
+    
+        
+    }
+    
+    .menu-item div{
+      display: flex;
+      justify-content: space-between;
+    
+    } */
 
     /* footer section */
     footer {
         height: auto;
         padding-top: 2.5vh;
-        font-size: 2rem;
+        font-size: 1rem;
+    }
+    .nav {
+        display:block;
+        width: 100%;
     }
 }
